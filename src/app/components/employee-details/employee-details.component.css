@@ -1,0 +1,113 @@
+.details-container {
+  margin: 40px auto;
+  width: 500px;
+  padding: 30px;
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s ease-in-out;
+}
+
+.details-title {
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.address-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.address-list li {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 7px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.form-input {
+  width: 92%;
+  padding: 14px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  outline: none;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-input:focus {
+  transform: scale(1.05);
+}
+
+.form-input::placeholder {
+  color: #555;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.update-btn, .save-btn, .cancel-btn, .back-btn {
+  padding: 14px 22px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.update-btn {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: #fff;
+}
+
+.update-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #e68900, #e64a19);
+}
+
+.save-btn {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+  color: #fff;
+}
+
+.save-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #218838, #146c2d);
+}
+
+.cancel-btn {
+  background: linear-gradient(135deg, #dc3545, #b02a37);
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #c82333, #922028);
+}
+
+.back-btn {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+}
+
+.back-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #0056b3, #003e80);
+}

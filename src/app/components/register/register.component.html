@@ -1,0 +1,43 @@
+<div class="register-container">
+  <div class="register-box">
+    <h2 class="title">Create a New Account</h2>
+
+    <!-- Registration Form -->
+    <form (ngSubmit)="onRegister()" *ngIf="!registrationSuccess" #registerForm="ngForm">
+      <input
+        type="text"
+        placeholder="Username"
+        [(ngModel)]="user.username"
+        name="username"
+        required
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        [(ngModel)]="user.password"
+        name="password"
+        required
+      />
+      <input
+        type="email"
+        placeholder="Email ID"
+        [(ngModel)]="user.emailId"
+        name="emailId"
+        required
+      />
+      <button type="submit" class="register-btn" [disabled]="!registerForm.valid">
+        Sign Up
+      </button>
+    </form>
+
+    <!-- Success Message -->
+    <div class="success-message" *ngIf="registrationSuccess">
+      <div class="green-checkmark">&#10004;</div>
+      <p>Registered Successfully!</p>
+    </div>
+
+    <div class="login-link">
+      <a routerLink="/">Back to Login</a>
+    </div>
+  </div>
+</div>

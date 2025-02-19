@@ -1,0 +1,80 @@
+.register-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+  }
+  
+  .register-box {
+    width: 400px;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .title {
+    color: #1877f2;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .register-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #42b72a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  
+  .register-btn:disabled {
+    background-color: #c6c6c6;
+    cursor: not-allowed;
+  }
+  
+  .register-btn:hover {
+    background-color: #36a420;
+  }
+  
+  .login-link {
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+  
+  .login-link a {
+    color: #1877f2;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Success message */
+  .success-message {
+    text-align: center;
+    margin-top: 2rem;
+    color: green;
+    font-size: 1.5rem;
+  }
+  
+  .green-checkmark {
+    font-size: 3rem;
+  }
+  

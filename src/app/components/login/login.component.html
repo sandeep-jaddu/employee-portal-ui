@@ -1,0 +1,25 @@
+<div class="login-container">
+  <div class="login-box">
+    <h1 class="portal-title">Employee Portal</h1>
+    <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+      <input
+        type="text"
+        placeholder="Username"
+        [(ngModel)]="credentials.username"
+        name="username"
+        required
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        [(ngModel)]="credentials.password"
+        name="password"
+        required
+      />
+      <button type="submit" class="login-btn" [disabled]="!loginForm.valid">Log In</button>
+    </form>
+    <div class="signup-link">
+      Don't have an account? <a routerLink="/register">Sign Up</a>
+    </div>
+  </div>
+</div>

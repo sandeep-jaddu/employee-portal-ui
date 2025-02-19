@@ -1,0 +1,67 @@
+<div class="users-container">
+  <h2 class="users-title">🧑‍💼 Employees Directory</h2>
+
+  <!-- Controls -->
+  <div class="controls">
+    <input
+      type="text"
+      class="search-box"
+      placeholder="🔍 Search Employee"
+      [(ngModel)]="searchText"
+      (input)="filterEmployees()"
+    />
+    <button class="export-btn" (click)="exportToExcel()">⬇️ Export to Excel</button>
+    <button class="export-btn" (click)="openAddEmployeeModal()">➕ Add Employee</button>
+  </div>
+
+  <!-- Employee Table -->
+  <div class="table-responsive">
+    <table class="table table-hover table-striped table-bordered exotic-table">
+      <thead class="table-dark">
+        <tr>
+          <th>#</th>
+          <th>👤 Name</th>
+          <th>📞 Phone</th>
+          <th>🎂 Age</th>
+          <th>🔍 Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of filteredEmployees | paginate: { itemsPerPage: 5, currentPage: currentPage }">
+          <td>{{ emp.id }}</td>
+          <td>{{ emp.name }}</td>
+          <td>{{ emp.phone }}</td>
+          <td>{{ emp.age }}</td>
+          <td>
+            <button class="btn btn-info btn-sm" (click)="viewDetails(emp.id)">👁️ View</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteEmployee(emp.id)">❌ Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pagination -->
+  <pagination-controls (pageChange)="currentPage = $event" [autoHide]="true"></pagination-controls>
+
+  <!-- Add Employee Modal -->
+  <div class="modal" [ngClass]="{ 'show': showAddModal }" style="display: {{ showAddModal ? 'block' : 'none' }};">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">➕ Add Employee</h5>
+          <button type="button" class="btn-close" (click)="closeAddModal()"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" placeholder="Name" [(ngModel)]="newEmployee.name" class="form-control mb-2" />
+          <input type="number" placeholder="Age" [(ngModel)]="newEmployee.age" class="form-control mb-2" />
+          <input type="text" placeholder="Phone" [(ngModel)]="newEmployee.phone" class="form-control mb-2" />
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success" (click)="addEmployee()">💾 Save</button>
+          <button class="btn btn-secondary" (click)="closeAddModal()">❌ Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

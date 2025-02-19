@@ -1,0 +1,42 @@
+<div class="users-container">
+    <h2 class="users-title">👥 Registered Users</h2>
+  
+    <!-- Search & Export Controls -->
+    <div class="controls">
+      <input
+        type="text"
+        class="search-box"
+        placeholder="🔍 Search by Username or Email"
+        [(ngModel)]="searchText"
+        (input)="filterUsers()"
+      />
+      <button class="export-btn" (click)="exportToExcel()">⬇️ Export to Excel</button>
+    </div>
+  
+    <!-- Users Table -->
+    <div class="table-responsive">
+      <table class="table table-hover table-striped table-bordered exotic-table">
+        <thead class="table-dark">
+          <tr>
+            <th>#</th>
+            <th>👤 Username</th>
+            <th>📧 Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of filteredUsers | paginate: { itemsPerPage: 6, currentPage: currentPage }">
+            <td>{{ user.id }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.emailId }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Pagination Controls -->
+    <pagination-controls
+      (pageChange)="currentPage = $event"
+      [autoHide]="true"
+    ></pagination-controls>
+  </div>
+  

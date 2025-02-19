@@ -1,0 +1,11 @@
+.home-container {
+    text-align: center;
+    margin-top: 50px;
+    color: #e91e63;
+    font-family: 'Papyrus', fantasy;
+    background: linear-gradient(135deg, #ff6b6b, #ffd93d);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  }
+  
