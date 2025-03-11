@@ -12,6 +12,8 @@ import { EmployeeDetailsComponent } from './components/employee-details/employee
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { BooksComponent } from './components/books/books.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     UsersComponent,
     NavbarComponent,
     EmployeesComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,
+    BooksComponent
   ],
   imports: [
     BrowserModule,

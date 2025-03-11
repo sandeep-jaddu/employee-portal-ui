@@ -1,0 +1,25 @@
+.exotic-title {
+    color: #ff5733;
+    font-family: 'Papyrus', fantasy;
+    text-shadow: 2px 2px 5px black;
+  }
+  
+  .exotic-card {
+    background: linear-gradient(135deg, #ffcc70, #ff5733);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .exotic-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-title {
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+  
